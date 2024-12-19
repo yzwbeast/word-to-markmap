@@ -1,3 +1,5 @@
+[X Posts](https://x.com/yzwbeast/status/1869764771438104768)
+
 # WordMap
 
 [中文版本 README available here](README.zh.md)
