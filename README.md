@@ -12,6 +12,30 @@ This project is a **Python tool** designed to help you query word definitions, s
 - **Markmap Conversion**: Convert stored JSON data into Markmap-friendly Markdown format.
 - **Visualization**: Use the Markmap tool to view word data as interactive mind maps.
 
+## Get a Wordnik API Key
+To get a Wordnik API key, you need to sign up for a Wordnik developer account and create an API key. Here are the detailed steps:
+
+1. Visit the [Wordnik developer website](https://developer.wordnik.com)
+2. Sign up or log in to an account
+3. Create an API key
+    - Click My Account or API Key in the navigation bar.
+    - Select Create an API Key or similar.
+    - Fill in the relevant information for your API key:
+    - Name: Give your API key a name (e.g. My Python App).
+    - Description: Briefly describe the purpose of the key (e.g. Word lookup for my app).
+    - API Access Level: You can usually choose the default permissions.
+    - Click Submit or Create Key.
+
+4. View and save the API key
+    - Once generated, the page will display your API Key.
+    - IMPORTANT: Keep this key safe! You can copy and paste it somewhere safe (e.g. a password manager or environment variable in your code).
+
+5. Using API Key
+    ```bash
+    # Enter your Wordnik API key
+    API_KEY = 'your_api_key_here'
+    ```
+
 ## Installation
 1. Clone the repository:
    ```bash
@@ -21,11 +45,28 @@ This project is a **Python tool** designed to help you query word definitions, s
    ```bash
    cd word-to-markmap
    ```
-3. Install dependencies:
+
+<details>
+<summary>Why Use Virtual Environments</summary>
+
+> When you encounter the "**externally-managed-environment**" error, it might be because the Python version installed via APT by the operating system enforces strict management of the system environment, preventing users from modifying system-level Python packages with pip.<br />
+> **Recommended Solution**:<br />Using a virtual environment is the cleanest and safest method. It does not affect the system Python environment and allows you to freely manage dependencies.
+</details>
+
+3. Create a virtual environment<br />Run in the project directory:
+   ```bash
+   python3 -m venv map
+   ```
+   - `map` is the name of the virtual environment and can be replaced with any name.
+4. Activate the virtual environment:
+   ```bash
+   source map/bin/activate
+   ```
+5. Install dependencies:
    ```bash
    pip install requests
    ```
-4. Run the word query script:
+6. Run the word query script:
    ```bash
    python word_query.py
    ```
